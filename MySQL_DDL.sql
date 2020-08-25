@@ -11,7 +11,7 @@ DROP TABLE IF EXISTS participation_personnel_list;
 DROP TABLE IF EXISTS diary;
 
 CREATE TABLE IF NOT EXISTS user (
-	id VARCHAR(12) NOT NULL,
+    id VARCHAR(12) NOT NULL AUTO_INCREMENT,
     pw VARCHAR(128) NOT NULL,
     name VARCHAR(20) NOT NULL,
     
@@ -19,7 +19,7 @@ CREATE TABLE IF NOT EXISTS user (
 );
 
 CREATE TABLE IF NOT EXISTS diary_book (
-	id INT(11) NOT NULL,
+    id INT(11) NOT NULL,
     name VARCHAR(40) NOT NULL,
     code CHAR(6) NOT NULL,
     owner VARCHAR(12) NOT NULL,
@@ -30,7 +30,7 @@ CREATE TABLE IF NOT EXISTS diary_book (
 );
 
 CREATE TABLE IF NOT EXISTS participation_personnel_list (
-	user_id VARCHAR(12) NOT NULL,
+    user_id VARCHAR(12) NOT NULL,
     diary_book_id INT(11) NOT NULL,
     
     FOREIGN KEY (user_id) REFERENCES user(id) ON UPDATE CASCADE,
@@ -40,8 +40,8 @@ CREATE TABLE IF NOT EXISTS participation_personnel_list (
 );
 
 CREATE TABLE IF NOT EXISTS diary (
-	id INT(11) NOT NULL,
-	diary_book_id INT(11) NOT NULL,
+    id INT(11) NOT NULL AUTO_INCREMENT,
+    diary_book_id INT(11) NOT NULL,
     author VARCHAR(12) NOT NULL,
     content VARCHAR(240),
     
