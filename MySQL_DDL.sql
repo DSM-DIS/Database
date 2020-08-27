@@ -26,7 +26,8 @@ CREATE TABLE IF NOT EXISTS diary_book (
     
     FOREIGN KEY (owner) REFERENCES user(id) ON UPDATE CASCADE,
     
-    PRIMARY KEY (id)
+    PRIMARY KEY (id),
+    UNIQUE(code)
 );
 
 CREATE TABLE IF NOT EXISTS participation_personnel_list (
