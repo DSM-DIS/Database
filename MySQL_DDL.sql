@@ -44,7 +44,8 @@ CREATE TABLE IF NOT EXISTS diary (
     id INT(11) NOT NULL AUTO_INCREMENT,
     diary_book_id INT(11) NOT NULL,
     author VARCHAR(12) NOT NULL,
-    content VARCHAR(240),
+    content VARCHAR(240) NOT NULL,
+    page INT(11) NOT NULL,
     
     FOREIGN KEY (author) REFERENCES user(id) ON UPDATE CASCADE,
     
