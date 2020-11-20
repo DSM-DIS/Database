@@ -11,9 +11,9 @@ DROP TABLE IF EXISTS participation_personnel_list;
 DROP TABLE IF EXISTS diary;
 
 CREATE TABLE IF NOT EXISTS user (
-    id VARCHAR(12) NOT NULL,
-    pw VARCHAR(128) NOT NULL,
-    name VARCHAR(20) NOT NULL,
+    email VARCHAR(12) NOT NULL,
+    password VARCHAR(128) NOT NULL,
+    username VARCHAR(20) NOT NULL,
     
     PRIMARY KEY (id)
 );
