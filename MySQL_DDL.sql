@@ -11,11 +11,11 @@ DROP TABLE IF EXISTS participation_personnel_list;
 DROP TABLE IF EXISTS diary;
 
 CREATE TABLE IF NOT EXISTS user (
-    email VARCHAR(12) NOT NULL,
+    id VARCHAR(12) NOT NULL,
     password VARCHAR(128) NOT NULL,
     username VARCHAR(20) NOT NULL,
     
-    PRIMARY KEY (email)
+    PRIMARY KEY (id)
 );
 
 CREATE TABLE IF NOT EXISTS diary_book (
