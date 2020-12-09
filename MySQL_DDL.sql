@@ -15,7 +15,7 @@ CREATE TABLE IF NOT EXISTS user (
     password VARCHAR(128) NOT NULL,
     username VARCHAR(20) NOT NULL,
     
-    PRIMARY KEY (id)
+    PRIMARY KEY (email)
 );
 
 CREATE TABLE IF NOT EXISTS diary_book (
